@@ -1,17 +1,9 @@
 import pygame, sys, random, math
 from tkinter import messagebox, Tk
 
-from pygame import fastevent
-
 
 
 size = (width, height) = 640, 480
-pygame.init()
-
-win = pygame.display.set_mode(size)
-
-clock = pygame.time.Clock()
-fps = 30
 
 cols, rows = 64//2, 48//2
 
@@ -90,8 +82,15 @@ def close():
 
 
 def AStar():
-    start = grid[5][5]
-    end = grid[cols - cols//2][rows - cols//4]
+    pygame.init()
+
+    win = pygame.display.set_mode(size)
+
+    clock = pygame.time.Clock()
+    fps = 30
+
+    start = grid[cols//2][5]
+    end = grid[cols//2][cols - cols//2]
 
     openSet.append(start)
 

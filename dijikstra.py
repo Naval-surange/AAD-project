@@ -5,11 +5,6 @@ from collections import deque
 from tkinter import messagebox, Tk
 
 size = (width, height) = 640, 480
-pygame.init()
-
-win = pygame.display.set_mode(size)
-pygame.display.set_caption("Dijktdtra's Path Finding")
-clock = pygame.time.Clock()
 
 cols, rows = 64//2, 48//2
 
@@ -59,6 +54,13 @@ def clickWall(pos, state):
 
 
 def dijikstra():
+    
+    pygame.init()
+
+    win = pygame.display.set_mode(size)
+    pygame.display.set_caption("Dijktdtra's Path Finding")
+    clock = pygame.time.Clock()
+
     
     for i in range(cols):
         arr = []
